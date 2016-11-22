@@ -43,7 +43,7 @@
     command: "{{ consul_cmd }}"
 
 - name: "reload dnsmasq for consul domain forwarding to take affect - check dnsmasq is running"
-  shell: "systemctl dnsmasq status"
+  shell: "systemctl status dnsmasq"
   register: dnsmasq_service_stat
 
 - name: "reload dnsmasq for consul domain forwarding to take affect - if running restart"
